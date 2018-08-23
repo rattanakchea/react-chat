@@ -2,7 +2,7 @@
   "name": "react-chat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://rattanakchea.github.io/react-chat",
+  "homepage": ".",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.2",
@@ -12,6 +12,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "deploy-s3": "aws s3 cp build s3://react-flashcard --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
