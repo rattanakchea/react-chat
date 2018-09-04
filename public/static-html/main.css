@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oswald Regular"), local("Oswald-Regular"),
+    url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8D.ttf)
+      format("truetype");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #ccc;
+  width: 100%;
+  height: 100%;
+}
+html {
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* card item */
+article.flashcard {
+  margin: 0px auto;
+  border: 1px rgba(255, 255, 255, 0.03) solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 30%;
+  height: 30%;
+}
+article.flashcard label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+article.flashcard section {
+  display: block;
+  font: 30px "Oswald", sans-serif;
+  text-align: center;
+  line-height: 400px;
+  width: 100%;
+  transition: all 0.2s linear 0s;
+  overflow: hidden;
+}
+article.flashcard section.front {
+  color: #ba1f53;
+  background: #ddd;
+}
+article.flashcard section.back {
+  color: #ddd;
+  background: #c85073;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
