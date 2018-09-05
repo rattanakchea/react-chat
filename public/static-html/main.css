@@ -17,44 +17,80 @@ body {
   width: 100%;
   height: 100%;
 }
-html {
-  padding: 50px;
+
+body {
+  height: 100%;
+  overflow: hidden; /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+  margin: 0px; /*removes default style*/
+  display: flex; /*enables flex content for its children*/
+  box-sizing: border-box;
 }
 
-.container {
+#left,
+#right {
+  height: 100%; /*allows both columns to span the full height of the browser window*/
+  display: flex;
+  flex-direction: column; /*places the left and right headers above the bottom content*/
+}
+
+#left {
+  padding: 25px;
+  margin-right: 20px;
+  flex-shrink: 0; /*makes sure that content is not cut off in a smaller browser window*/
+  background-color: white;
+}
+
+#right {
+  padding-top: 35px;
+  flex-grow: 1;
+}
+
+.top-left {
+  flex-shink: 0;
+}
+
+ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.bottom {
+  flex-grow: 1; /*ensures that the container will take up the full height of the parent container*/
+  overflow-y: auto; /*adds scroll to this container*/
+}
+
+/* ****************** */
+
+.content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* card item */
 article.flashcard {
-  margin: 0px auto;
+  margin: 0px 15px 20px;
   border: 1px rgba(255, 255, 255, 0.03) solid;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   width: 30%;
-  height: 30%;
-}
-article.flashcard label {
-  display: block;
-  width: 100%;
-  height: 100%;
+  height: 200px;
   position: relative;
 }
+
 article.flashcard section {
-  display: block;
-  font: 30px "Oswald", sans-serif;
-  text-align: center;
-  line-height: 400px;
-  width: 100%;
+  font: 1.5rem "Oswald", sans-serif;
+  height: 100%;
   transition: all 0.2s linear 0s;
-  overflow: hidden;
 }
-article.flashcard section.front {
-  color: #ba1f53;
+article.flashcard section.front,
+article.flashcard section.back {
   background: #ddd;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 article.flashcard section.back {
-  color: #ddd;
+  color: white;
   background: #c85073;
   position: absolute;
   top: 0;

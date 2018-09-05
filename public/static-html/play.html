@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <div id="left">
+            <div class="top-left">
+                <h1>Categories</h1>
+                <ul>
+                    <li>Citizenship tests</li>
+                </ul>
+            </div>
+            <div class="bottom"></div>
+        </div>
+        <div id="right">
+            <div class="content">
+                <article class="card-item">
+                    <section class="front">
+                        What is the constitution?
+                    </section>
+                    <section class="back">
+                        Back of the flashcard!
+                    </section>
+                </article>
+
+                <div class="control">
+                    <a class="button is-light">Skip</a>
+                    <a class="button is-info is-inverted">Reveal</a>
+                    <a class="button is-primary is-inverted">Next</a>
+                </div>
+
+                <div class="status">
+                    <p>Question 1 of 20</p>
+                    <p>You have answer 3 questions so far.</p>
+                    <p>17 questions remaining</p>
+                </div>
+            </div>
+
+        </div>
+
+        <style>
+            .status {
+                margin-top: 25px;
+                padding: 10px;
+                width: 75%;
+                height: 150px;
+                background-color: white;
+            }
+
+            .content {
+                display: flex;
+                /* justify-content: center; */
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article.card-item {
+                margin: 0px 15px 20px;
+                border: 1px rgba(255, 255, 255, 0.03) solid;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                width: 60%;
+                height: 250px;
+                position: relative;
+            }
+
+            article.card-item section {
+                font: 1.5rem "Oswald", sans-serif;
+                height: 100%;
+                transition: all 0.2s linear 0s;
+            }
+
+            article.card-item section.front,
+            article.card-item section.back {
+                background: #ddd;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+
+            article.card-item section.back {
+                color: white;
+                background: #c85073;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+        </style>
+    </body>
+
+</html>
