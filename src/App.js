@@ -27,15 +27,19 @@ class App extends Component {
     };
 
     this.controller = {
-      next: function() {
-        console.log("from app.js next");
-      }
+      next: this.next
     };
   }
 
   // go to next question
   next() {
     console.log("click on next");
+
+    // error: this is undefined
+    // this.selectedCard = {
+    //   front: "New card?",
+    //   back: "It is the land of the law."
+    // };
   }
 
   render() {
