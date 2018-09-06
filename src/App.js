@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import CardItem from "./components/CardItem";
 import Clock from "./components/Clock";
+import Controller from "./components/Controller";
 
 class App extends Component {
   constructor() {
@@ -32,7 +33,9 @@ class App extends Component {
         <div id="left">
           <div className="top-left">
             <Clock />
-            <h1>Categories</h1>
+            <br />
+
+            <h2>Categories</h2>
             <ul>
               <li>Citizenship tests</li>
             </ul>
@@ -43,6 +46,8 @@ class App extends Component {
           <div className="Content">
             <CardItem item={this.selectedCard} />
           </div>
+
+          <Controller />
         </div>
       </div>
     );
