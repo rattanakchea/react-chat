@@ -5,8 +5,8 @@ class CardItem extends Component {
   render() {
     return (
       <article className="card-item">
-        <section className="front">What is the constitution?</section>
-        <section className="back">Back of the flashcard!</section>
+        <section className="front">{this.props.item.front}</section>
+        <section className="back">{this.props.item.front}</section>
       </article>
     );
   }

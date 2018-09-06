@@ -4,6 +4,27 @@ import "./App.css";
 import CardItem from "./components/CardItem";
 
 class App extends Component {
+  constructor() {
+    super();
+    let selectedCard = {
+      front: "What is constitution?",
+      back: "It is the land of the law."
+    };
+    let selectedCard2 = {
+      front: "What is constitution?",
+      back: "It is the land of the law."
+    };
+
+    this.selectedCard = {
+      front: "What is constitution?",
+      back: "It is the land of the law."
+    };
+
+    this.state = {
+      list: [selectedCard, selectedCard2]
+    };
+  }
+
   render() {
     return (
       <div className="container">
@@ -18,7 +39,7 @@ class App extends Component {
         </div>
         <div id="right">
           <div className="Content">
-            <CardItem />
+            <CardItem item={this.selectedCard} />
           </div>
         </div>
       </div>
