@@ -6,7 +6,7 @@
   background-color: lightblue;
 }
 
-.container {
+.app-container {
   display: flex;
   box-sizing: border-box;
   width: 100%;
@@ -50,4 +50,6 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
 }

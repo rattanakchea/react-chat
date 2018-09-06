@@ -25,11 +25,22 @@ class App extends Component {
     this.state = {
       list: [selectedCard, selectedCard2]
     };
+
+    this.controller = {
+      next: function() {
+        console.log("from app.js next");
+      }
+    };
+  }
+
+  // go to next question
+  next() {
+    console.log("click on next");
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="app-container">
         <div id="left">
           <div className="top-left">
             <Clock />
@@ -43,11 +54,11 @@ class App extends Component {
           <div className="bottom" />
         </div>
         <div id="right">
-          <div className="Content">
+          <div className="content">
             <CardItem item={this.selectedCard} />
-          </div>
 
-          <Controller />
+            <Controller controller={this.controller} />
+          </div>
         </div>
       </div>
     );

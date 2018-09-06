@@ -39,7 +39,9 @@ class Clock extends Component {
   render() {
     return (
       <div>
-        <h3>Duration</h3>
+        <h3>
+          <strong>Duration</strong>
+        </h3>
         <p>
           Minute:{" "}
           {Math.floor(
