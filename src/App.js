@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import CardItem from "./components/CardItem";
+import Clock from "./components/Clock";
 
 class App extends Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends Component {
       <div className="container">
         <div id="left">
           <div className="top-left">
+            <Clock />
             <h1>Categories</h1>
             <ul>
               <li>Citizenship tests</li>
