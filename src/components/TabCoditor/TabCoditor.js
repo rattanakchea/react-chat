@@ -17,15 +17,15 @@ class TabCoditor extends Component {
     return (
       <div className="tabs-coditor">
         <ol className="tab-list">
-
-          return this.props.data.map(item=> {
-            return (<Tab title={item.title} />);
-          });
-            
-          <li className="tab-list-item is-active">JavaScript</li>
-
-          <Tab title="Python" />
-          <Tab title="Ruby" />
+          {this.props.data.map((item, index) => {
+            return (
+              <Tab
+                key={index}
+                title={item.title}
+                isActive={item.isActive || false}
+              />
+            );
+          })}
         </ol>
         <div className="tab-content">
           <pre>`some code or html here;`</pre>

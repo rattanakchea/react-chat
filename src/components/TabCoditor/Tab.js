@@ -7,8 +7,16 @@ import "./TabCoditor.css";
  * */
 
 class Tab extends Component {
+  //   constructor() {}
+
   render() {
-    return <li className="tab-list-item is-active">{this.props.title}</li>;
+    let isActive = this.props.isActive;
+    let className = "tab-list-item";
+    if (isActive) {
+      className += " is-active";
+    }
+
+    return <li className={className}>{this.props.title}</li>;
   }
 }
 export default Tab;

@@ -32,7 +32,7 @@ class App extends Component {
     };
 
     this.tabConfigs = [
-      { title: "JavaScript" },
+      { title: "JavaScript", isActive: true },
       { title: "Python" },
       { title: "Ruby" }
     ];
