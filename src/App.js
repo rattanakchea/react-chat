@@ -4,6 +4,7 @@ import "./App.css";
 import CardItem from "./components/CardItem";
 import Clock from "./components/Clock";
 import Controller from "./components/Controller";
+import TabCoditor from "./components/TabCoditor/TabCoditor";
 
 class App extends Component {
   constructor() {
@@ -29,6 +30,12 @@ class App extends Component {
     this.controller = {
       next: this.next
     };
+
+    this.tabConfigs = [
+      { title: "JavaScript" },
+      { title: "Python" },
+      { title: "Ruby" }
+    ];
   }
 
   // go to next question
@@ -59,9 +66,10 @@ class App extends Component {
         </div>
         <div id="right">
           <div className="content">
-            <CardItem item={this.selectedCard} />
+            {/* <CardItem item={this.selectedCard} />
+            <Controller controller={this.controller} /> */}
 
-            <Controller controller={this.controller} />
+            <TabCoditor data={this.tabConfigs} />
           </div>
         </div>
       </div>

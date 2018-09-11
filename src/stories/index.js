@@ -7,6 +7,7 @@ import { linkTo } from "@storybook/addon-links";
 import { Button, Welcome } from "@storybook/react/demo";
 import Clock from "../components/Clock";
 import CardItem from "../components/CardItem";
+import TabCoditor from "../components/TabCoditor/TabCoditor";
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -28,3 +29,5 @@ storiesOf("Clock", module).add("simple clock", () => <Clock />);
 storiesOf("CardItem", module).add("CardItem", () => (
   <CardItem item={{ front: "hello", back: "world" }} />
 ));
+
+storiesOf("TabCoditor", module).add("TabCoditor", () => <TabCoditor />);
