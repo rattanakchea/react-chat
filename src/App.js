@@ -32,10 +32,20 @@ class App extends Component {
     };
 
     this.tabConfigs = [
-      { title: "JavaScript", isActive: true },
-      { title: "Python" },
+      { title: "JavaScript" },
+      { title: "Python", isActive: true },
       { title: "Ruby" }
     ];
+
+    this.tabConfigs[0].content = {
+      text: "some text content",
+      uri: "./js file"
+    };
+
+    this.tabConfigs[1].content = {
+      text: "some python content",
+      uri: "./js file"
+    };
   }
 
   // go to next question

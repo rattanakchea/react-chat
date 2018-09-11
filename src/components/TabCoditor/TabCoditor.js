@@ -28,7 +28,11 @@ class TabCoditor extends Component {
           })}
         </ol>
         <div className="tab-content">
-          <pre>`some code or html here;`</pre>
+          {/* add logic here to display only content of the active tab */}
+          {this.props.data.map((item, index) => {
+            if (item.isActive && item.content)
+              return <pre>{item.content.text}</pre>;
+          })}
         </div>
       </div>
     );

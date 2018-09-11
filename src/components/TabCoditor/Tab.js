@@ -15,7 +15,6 @@ class Tab extends Component {
     if (isActive) {
       className += " is-active";
     }
-
     return <li className={className}>{this.props.title}</li>;
   }
 }
