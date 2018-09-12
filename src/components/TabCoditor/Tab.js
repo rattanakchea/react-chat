@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./TabCoditor.css";
+import "./Tab.css";
 
 /**
  * Tab item
@@ -7,7 +7,16 @@ import "./TabCoditor.css";
  * */
 
 class Tab extends Component {
-  //   constructor() {}
+  constructor(props) {
+    super(props);
+    // console.log("in Tab component: ", this.props);
+  }
+
+  onTabClick = () => {
+    const { title, onClick } = this.props;
+    // call in parent (TabCoditor) onClick event
+    onClick(title);
+  };
 
   render() {
     let isActive = this.props.isActive;
@@ -15,7 +24,11 @@ class Tab extends Component {
     if (isActive) {
       className += " is-active";
     }
-    return <li className={className}>{this.props.title}</li>;
+    return (
+      <li onClick={this.onTabClick} className={className}>
+        {this.props.title}
+      </li>
+    );
   }
 }
 export default Tab;

@@ -31,9 +31,10 @@ class App extends Component {
       next: this.next
     };
 
+    // the first item isActive is true
     this.tabConfigs = [
       { title: "JavaScript" },
-      { title: "Python", isActive: true },
+      { title: "Python" },
       { title: "Ruby" }
     ];
 
