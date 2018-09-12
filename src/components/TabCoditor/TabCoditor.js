@@ -36,6 +36,7 @@ class TabCoditor extends Component {
           {data.map((item, index) => {
             return (
               <Tab
+                activeTab={this.state.activeTab}
                 onClick={this.onClickTabTitle}
                 key={index}
                 title={item.title}

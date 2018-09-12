@@ -19,9 +19,9 @@ class Tab extends Component {
   };
 
   render() {
-    let isActive = this.props.isActive;
+    const { title, activeTab } = this.props;
     let className = "tab-list-item";
-    if (isActive) {
+    if (activeTab == title) {
       className += " is-active";
     }
     return (
