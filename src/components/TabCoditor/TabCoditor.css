@@ -27,7 +27,11 @@
 }
 
 .tab-content pre {
-  /* display: none; */
+  display: none;
+}
+
+.tab-content pre.content-active {
+  display: block;
 }
 
 .tab-list li {

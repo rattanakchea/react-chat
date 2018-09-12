@@ -11,10 +11,13 @@ import React, { Component } from "react";
 class TabContent extends Component {
   //   constructor() {}
   render() {
-    const { content } = this.props;
-
+    const { activeTab, title, content } = this.props;
+    let className = "";
+    if (activeTab === title) {
+      className = "content-active";
+    }
     if (content && content.text) {
-      return <pre>{content.text}</pre>;
+      return <pre className={className}>{content.text}</pre>;
     }
 
     return null;

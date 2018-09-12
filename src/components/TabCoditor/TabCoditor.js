@@ -40,7 +40,6 @@ class TabCoditor extends Component {
                 onClick={this.onClickTabTitle}
                 key={index}
                 title={item.title}
-                isActive={item.isActive || false}
               />
             );
           })}
@@ -48,7 +47,13 @@ class TabCoditor extends Component {
         <div className="tab-content">
           {/* add logic here to display only content of the active tab */}
           {data.map((item, index) => {
-            return <TabContent content={item.content} />;
+            return (
+              <TabContent
+                activeTab={this.state.activeTab}
+                title={item.title}
+                content={item.content}
+              />
+            );
           })}
         </div>
       </div>
