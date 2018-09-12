@@ -7,10 +7,11 @@ import "./Tab.css";
  * */
 
 class Tab extends Component {
-  constructor(props) {
-    super(props);
-    // console.log("in Tab component: ", this.props);
-  }
+  // useless constructor
+  // constructor() {
+  //   super();
+  //   // console.log("in Tab component: ", this.props);
+  // }
 
   onTabClick = () => {
     const { title, onClick } = this.props;
@@ -21,7 +22,7 @@ class Tab extends Component {
   render() {
     const { title, activeTab } = this.props;
     let className = "tab-list-item";
-    if (activeTab == title) {
+    if (activeTab === title) {
       className += " is-active";
     }
     return (

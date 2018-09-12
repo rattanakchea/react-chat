@@ -40,16 +40,16 @@ class App extends Component {
 
     this.tabConfigs[0].content = {
       text: "some js content",
-      uri: "./js file"
+      file: "./files/javascript.js"
     };
 
     this.tabConfigs[1].content = {
       text: "some python content",
-      uri: "./js file"
+      file: "./files/python.py"
     };
     this.tabConfigs[2].content = {
       text: "some ruby text",
-      uri: "./js file"
+      file: "./files/ruby.rb"
     };
   }
 

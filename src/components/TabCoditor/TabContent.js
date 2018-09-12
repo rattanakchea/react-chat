@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-
-// if (item.isActive && item.content)
-// return <pre>{item.content.text}</pre>;
+import axios from "axios";
 
 /**
  * TabContent content
@@ -9,13 +7,35 @@ import React, { Component } from "react";
  * */
 
 class TabContent extends Component {
-  //   constructor() {}
+  constructor() {
+    super();
+    this.content = "";
+  }
+
+  componentDidMount() {
+    const { activeTab, title, content } = this.props;
+    let className = "";
+    if (activeTab === title) {
+      className = "content-active";
+    }
+    if (content && content.file) {
+      axios.get(content.file).then(res => {
+        console.log("fetch file: ", content.file);
+        console.log("response: ", res.data);
+
+        this.content = <pre className={className}>{res.data}</pre>;
+      });
+    }
+  }
   render() {
     const { activeTab, title, content } = this.props;
     let className = "";
     if (activeTab === title) {
       className = "content-active";
     }
+
+    return this.content || "hello";
+
     if (content && content.text) {
       return <pre className={className}>{content.text}</pre>;
     }
