@@ -21,7 +21,7 @@ class TabCoditor extends Component {
   }
 
   onClickTabTitle = title => {
-    console.log(title);
+    // console.log(title);
     this.setState({
       activeTab: title
     });
