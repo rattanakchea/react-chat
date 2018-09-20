@@ -18,7 +18,6 @@ const highlight = (language, str) => {
 class TabContent extends Component {
   constructor() {
     super();
-
     this.state = {
       content: ""
     };
